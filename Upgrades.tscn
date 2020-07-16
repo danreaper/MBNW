@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Upgrades.gd" type="Script" id=2]
+
+[node name="ColorRect" type="ColorRect"]
+margin_left = 14.0
+margin_top = 6.0
+margin_right = 623.0
+margin_bottom = 355.0
+color = Color( 0.486275, 0.639216, 0.839216, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 233.645
+margin_top = 3.42952
+margin_right = 344.645
+margin_bottom = 40.4295
+custom_fonts/font = ExtResource( 1 )
+text = "UPGRADES"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,247 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Panel.gd" type="Script" id=1]
+[ext_resource path="res://Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/image0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/man.png" type="Texture" id=4]
+[ext_resource path="res://Upgrades.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/Upgrade1.png" type="Texture" id=6]
+[ext_resource path="res://FontBody.tres" type="DynamicFont" id=7]
+
+[node name="Panel" type="ColorRect"]
+margin_left = 48.1192
+margin_top = 27.3522
+margin_right = 639.119
+margin_bottom = 435.352
+color = Color( 0.501961, 0.447059, 0.447059, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="burger" type="Sprite" parent="."]
+position = Vector2( 664.344, 307.399 )
+scale = Vector2( 0.0593728, 0.0593728 )
+z_index = 1
+texture = ExtResource( 3 )
+
+[node name="L_Burgers" type="Label" parent="."]
+anchor_left = 0.00526684
+anchor_right = 0.00526684
+margin_left = 34.1239
+margin_top = 45.6309
+margin_right = 138.124
+margin_bottom = 92.6309
+custom_fonts/font = ExtResource( 2 )
+text = "0 Burger"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_Money" type="Label" parent="."]
+anchor_left = 0.00420044
+anchor_right = 0.00420044
+margin_left = 18.5175
+margin_top = 348.0
+margin_right = 84.5175
+margin_bottom = 393.0
+custom_fonts/font = ExtResource( 2 )
+text = "$0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_Chef" type="Label" parent="."]
+anchor_left = 0.00420044
+anchor_right = 0.00420044
+margin_left = 163.562
+margin_top = -122.398
+margin_right = 210.562
+margin_bottom = -69.3977
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_Cashier" type="Label" parent="."]
+anchor_left = 0.00420044
+anchor_right = 0.00420044
+margin_left = 301.066
+margin_top = -244.492
+margin_right = 348.066
+margin_bottom = -191.492
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B_Cook" type="Button" parent="."]
+margin_left = 44.7086
+margin_top = 119.053
+margin_right = 128.709
+margin_bottom = 139.053
+text = "Cook Burg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B_Sell" type="Button" parent="."]
+margin_left = 43.5895
+margin_top = 142.0
+margin_right = 132.589
+margin_bottom = 163.0
+text = "Sell Burg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="T_Burger" type="Timer" parent="."]
+
+[node name="B_Chef" type="Button" parent="."]
+margin_left = 44.6036
+margin_top = 185.675
+margin_right = 119.604
+margin_bottom = 205.675
+text = "Hire  Chef"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B_Cashier" type="Button" parent="."]
+margin_left = 38.15
+margin_top = 210.885
+margin_right = 128.15
+margin_bottom = 230.885
+text = "Hire Cashier"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="T_Customer" type="Timer" parent="."]
+
+[node name="L_Customer" type="Label" parent="."]
+margin_left = 426.907
+margin_top = 43.2702
+margin_right = 580.907
+margin_bottom = 103.27
+custom_fonts/font = ExtResource( 2 )
+text = "0 Customer/s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="man" type="Sprite" parent="."]
+position = Vector2( 501.186, 136.427 )
+scale = Vector2( 0.18086, 0.18086 )
+texture = ExtResource( 4 )
+
+[node name="T_Cook" type="Timer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 44.8415
+margin_top = 93.3204
+margin_right = 129.841
+margin_bottom = 115.32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="T_Bar" type="Timer" parent="."]
+
+[node name="B_Upgrades" type="Button" parent="."]
+margin_left = 464.148
+margin_top = 353.733
+margin_right = 581.148
+margin_bottom = 396.733
+custom_fonts/font = ExtResource( 2 )
+text = "Upgrades"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0.8, 1.806 )
+offset = Vector2( -0.055, 0 )
+anchor_mode = 0
+zoom = Vector2( 0.576, 0.675 )
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2( 608.534, 5.48924 )
+offset = Vector2( -0.055, 0 )
+anchor_mode = 0
+zoom = Vector2( 0.576, 0.655 )
+
+[node name="ColorRect" parent="." instance=ExtResource( 5 )]
+anchor_left = -0.00218694
+anchor_right = -0.00218694
+margin_left = 610.462
+margin_top = 2.12292
+margin_right = 1234.46
+margin_bottom = 399.123
+
+[node name="B_Main" type="Button" parent="."]
+margin_left = 619.782
+margin_top = 350.621
+margin_right = 708.782
+margin_bottom = 384.621
+custom_fonts/font = ExtResource( 2 )
+text = "Burger"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B_Upgrade001" type="TextureButton" parent="."]
+margin_left = 649.55
+margin_top = 56.8501
+margin_right = 736.55
+margin_bottom = 140.85
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="B_Upgrade001"]
+margin_left = 90.95
+margin_top = -0.750015
+margin_right = 310.95
+margin_bottom = 76.25
+custom_fonts/font = ExtResource( 2 )
+text = "Buy Poster Ads
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="B_Upgrade001"]
+margin_left = 91.2001
+margin_top = 36.1001
+margin_right = 305.2
+margin_bottom = 57.1001
+custom_fonts/font = ExtResource( 7 )
+text = "Increase chance of customer by 1%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_MakeBurger" type="Label" parent="."]
+margin_left = 213.75
+margin_top = 3.0
+margin_right = 421.75
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 2 )
+text = "Make Burger"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="B_Cook" to="." method="_on_B_Cook_pressed"]
+[connection signal="pressed" from="B_Sell" to="." method="_on_B_Sell_pressed"]
+[connection signal="timeout" from="T_Burger" to="." method="_on_Burger_Timer"]
+[connection signal="pressed" from="B_Chef" to="." method="_on_B_Chef_pressed"]
+[connection signal="pressed" from="B_Cashier" to="." method="_on_B_Cashier_pressed"]
+[connection signal="timeout" from="T_Customer" to="." method="_on_Customer_Timer"]
+[connection signal="timeout" from="T_Cook" to="." method="_on_T_Cook_timeout"]
+[connection signal="timeout" from="T_Bar" to="." method="_on_T_Bar_timeout"]
+[connection signal="pressed" from="B_Upgrades" to="." method="_on_B_Upgrades_pressed"]
+[connection signal="pressed" from="B_Main" to="." method="_on_B_Main_pressed"]
+[connection signal="pressed" from="B_Upgrade001" to="." method="_on_B_upgrade_pressed"]
